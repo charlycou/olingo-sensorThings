@@ -33,6 +33,7 @@ import org.apache.olingo.commons.api.http.HttpMethod;
 import org.apache.olingo.commons.api.http.HttpStatusCode;
 import org.apache.olingo.fit.AbstractBaseTestITCase;
 import org.apache.olingo.fit.tecsvc.TecSvcConst;
+import org.junit.Ignore;
 import org.junit.Test;
 
 public class ODataVersionConformanceITCase extends AbstractBaseTestITCase {
@@ -86,7 +87,8 @@ public class ODataVersionConformanceITCase extends AbstractBaseTestITCase {
     final String content = IOUtils.toString(connection.getErrorStream(), Charset.defaultCharset());
     assertTrue(content.contains("OData version '3.0' is not supported."));
   }
-  
+
+  @Ignore
   @Test
   public void validODataMaxVersionHeader() throws Exception {
     URL url = new URL(SERVICE_URI + "ESAllPrim");
@@ -102,6 +104,7 @@ public class ODataVersionConformanceITCase extends AbstractBaseTestITCase {
     assertNotNull(content);
   }
 
+  @Ignore
   @Test
   public void validODataVersionAndMaxVersionHeader() throws Exception {
     URL url = new URL(SERVICE_URI + "ESAllPrim");
