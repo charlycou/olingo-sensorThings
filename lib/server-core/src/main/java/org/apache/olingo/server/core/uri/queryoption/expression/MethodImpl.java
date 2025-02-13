@@ -114,6 +114,18 @@ public class MethodImpl implements Method {
       break;
     case COMPUTE_AGGREGATE:
       kind = null;
+      break;
+    case STEQUALS:
+    case STDISJOINT:
+    case STTOUCHES:
+    case STWITHIN:
+    case STOVERLAPS:
+    case STCROSSES:
+    case STINTERSECTS:
+    case STCONTAINS:
+    case STRELATE:
+      kind = EdmPrimitiveTypeKind.Boolean;
+      break;
     }
 
     return kind == null ? null : new ODataImpl().createPrimitiveTypeInstance(kind);

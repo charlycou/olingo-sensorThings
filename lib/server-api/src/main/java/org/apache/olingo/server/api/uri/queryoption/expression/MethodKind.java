@@ -54,7 +54,16 @@ public enum MethodKind {
   GEOINTERSECTS("geo.intersects"),
   CAST("cast"),
   ISOF("isof"),
-  SUBSTRINGOF("substringof");
+  SUBSTRINGOF("substringof"),
+  STEQUALS("st_equals"),
+  STDISJOINT("st_disjoint"),
+  STTOUCHES("st_touches"),
+  STWITHIN("st_within"),
+  STOVERLAPS("st_overlaps"),
+  STCROSSES("st_crosses"),
+  STINTERSECTS("st_intersects"),
+  STCONTAINS("st_contains"),
+  STRELATE("st_relate");
 
   private String syntax;
 

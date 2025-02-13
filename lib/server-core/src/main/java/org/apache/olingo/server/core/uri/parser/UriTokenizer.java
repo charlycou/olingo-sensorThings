@@ -173,6 +173,17 @@ public class UriTokenizer {
     YearMethod,
     SubstringofMethod,
 
+    //STA additional spatial relationship functions
+    StEquals,
+    StDisjoint,
+    StTouches,
+    StWithin,
+    StOverlaps,
+    StCrosses,
+    StIntersects,
+    StContains,
+    StRelate,
+
     IsDefinedMethod, // for the aggregation extension
 
     AggregateTrafo, // for the aggregation extension
@@ -649,6 +660,35 @@ public class UriTokenizer {
     case SubstringofMethod:
       found = nextMethod("substringof");
       break;
+
+      // Spatial relationship method defined in STA (OGC Simple Feature Access specification)
+      case StEquals :
+        found = nextMethod("st_equals");
+        break;
+      case StDisjoint :
+        found =  nextMethod("st_disjoint");
+        break;
+      case StTouches :
+        found =  nextMethod("st_touches");
+        break;
+      case StWithin :
+        found =  nextMethod("st_within");
+        break;
+      case StOverlaps :
+        found = nextMethod("st_overlaps");
+        break;
+      case StCrosses :
+        found =  nextMethod("st_crosses");
+        break;
+      case StIntersects :
+        found = nextMethod("st_intersects");
+        break;
+      case StContains :
+        found = nextMethod("st_contains");
+        break;
+      case StRelate :
+        found = nextMethod("st_relate");
+        break;
 
     // Method for the aggregation extension
     case IsDefinedMethod:
