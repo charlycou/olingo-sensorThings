@@ -30,19 +30,19 @@
   <parent>
     <groupId>org.apache.olingo</groupId>
     <artifactId>odata-parent</artifactId>
-    <version>5.0.1-SNAPSHOT</version>
-    <relativePath>..</relativePath>
+    <version>5.0.1-SNAPSHOT-sensor-things</version>
+    <relativePath>../pom.xml</relativePath>
   </parent>
 
   <modules>
     <module>commons-api</module>
     <module>commons-core</module>
-    <module>client-api</module>
-    <module>client-core</module>
+<!--    <module>client-api</module>-->
+<!--    <module>client-core</module>-->
     <module>server-api</module>
     <module>server-core</module>
-    <module>server-core-ext</module>
-    <module>server-tecsvc</module>
+<!--    <module>server-core-ext</module>-->
+<!--    <module>server-tecsvc</module>-->
     <module>server-test</module>
   </modules>
 

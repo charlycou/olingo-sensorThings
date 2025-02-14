@@ -25,7 +25,7 @@
 
   <groupId>org.apache.olingo</groupId>
   <artifactId>odata-parent</artifactId>
-  <version>5.0.1-SNAPSHOT</version>
+  <version>5.0.1-SNAPSHOT-sensor-things</version>
   <packaging>pom</packaging>
 
   <name>Olingo-OData</name>
@@ -65,10 +65,6 @@
 
   <modules>
     <module>lib</module>
-    <module>ext</module>
-    <module>fit</module>
-    <module>dist</module>
-    <module>samples</module>
   </modules>
 
   <properties>
@@ -78,46 +74,23 @@
 
     <commons.logging.version>1.2</commons.logging.version>
     <commons.vfs.version>2.0</commons.vfs.version>
-    <esigate.version>4.4</esigate.version>
     <servlet.version>3.1.0</servlet.version>
-    <cxf.version>4.0.3</cxf.version>
     <netty.version>4.1.97.Final</netty.version>
 
-    <velocity.version>1.7</velocity.version>
     <maven.plugin.api.version>3.6.1</maven.plugin.api.version>
     <maven.plugin.tools.version>3.6.1</maven.plugin.tools.version>
     <maven.bundle.plugin.version>5.1.9</maven.bundle.plugin.version>
-    <hc.client.version>4.5.14</hc.client.version>
-    <hc.core.version>4.4.16</hc.core.version>
     <jackson.version>2.14.0</jackson.version>
     <jackson-databind.version>2.14.3</jackson-databind.version>
-    <aalto-xml.version>1.3.2</aalto-xml.version>
     <xmlunit.version>1.6</xmlunit.version>
     <mockito.core.version>5.15.2</mockito.core.version>
     <junit.version>4.13.2</junit.version>
 
-    <android.platform.version>4.1.1.4</android.platform.version>
-    <stax.api.version>1.0-2</stax.api.version>
-
     <sl4j.version>1.7.36</sl4j.version>
 
-    <jakarta.inject.version>2.0.1</jakarta.inject.version>
-    <jakarta.ws.version>3.1.0</jakarta.ws.version>
     <jakarta.servlet.version>6.0.0</jakarta.servlet.version>
     <jakarta.annotation.version>2.1.1</jakarta.annotation.version>
     <jakarta.xml.version>4.0.0</jakarta.xml.version>
-
-    <spring.version>6.1.0</spring.version>
-    <javax.activation.version>1.1</javax.activation.version>
-    <geronimo.version>1.0.1</geronimo.version>
-
-    <tomcat.servlet.port>9080</tomcat.servlet.port>
-    <tomcat.version>10.0.27</tomcat.version>
-
-    <!-- for osgi integration testing -->
-    <osgi.version>4.2.0</osgi.version>
-    <karaf.version>3.0.3</karaf.version>
-    <pax.exam.version>4.13.5</pax.exam.version>
 
     <!-- Project build settings -->
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -158,16 +131,16 @@
         <scope>provided</scope>
       </dependency>
 
-      <dependency>
-        <groupId>org.apache.felix</groupId>
-        <artifactId>maven-bundle-plugin</artifactId>
-        <version>${maven.bundle.plugin.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.apache.httpcomponents</groupId>
-        <artifactId>httpclient</artifactId>
-        <version>${hc.client.version}</version>
-      </dependency>
+<!--      <dependency>-->
+<!--        <groupId>org.apache.felix</groupId>-->
+<!--        <artifactId>maven-bundle-plugin</artifactId>-->
+<!--        <version>${maven.bundle.plugin.version}</version>-->
+<!--      </dependency>-->
+<!--      <dependency>-->
+<!--        <groupId>org.apache.httpcomponents</groupId>-->
+<!--        <artifactId>httpclient</artifactId>-->
+<!--        <version>${hc.client.version}</version>-->
+<!--      </dependency>-->
 
       <dependency>
         <groupId>com.fasterxml.jackson.core</groupId>
@@ -184,23 +157,23 @@
         <artifactId>jackson-annotations</artifactId>
         <version>${jackson.version}</version>
       </dependency>
-      <dependency>
-        <groupId>com.fasterxml.jackson.dataformat</groupId>
-        <artifactId>jackson-dataformat-xml</artifactId>
-        <version>${jackson.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>com.fasterxml.jackson.jakarta.rs</groupId>
-        <artifactId>jackson-jakarta-rs-json-provider</artifactId>
-        <version>${jackson.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>com.fasterxml</groupId>
-        <artifactId>aalto-xml</artifactId>
-        <version>${aalto-xml.version}</version>
-      </dependency>
+<!--      <dependency>-->
+<!--        <groupId>com.fasterxml.jackson.dataformat</groupId>-->
+<!--        <artifactId>jackson-dataformat-xml</artifactId>-->
+<!--        <version>${jackson.version}</version>-->
+<!--      </dependency>-->
+<!--      <dependency>-->
+<!--        <groupId>com.fasterxml.jackson.jakarta.rs</groupId>-->
+<!--        <artifactId>jackson-jakarta-rs-json-provider</artifactId>-->
+<!--        <version>${jackson.version}</version>-->
+<!--      </dependency>-->
+<!--      <dependency>-->
+<!--        <groupId>com.fasterxml</groupId>-->
+<!--        <artifactId>aalto-xml</artifactId>-->
+<!--        <version>${aalto-xml.version}</version>-->
+<!--      </dependency>-->
 
-      <dependency>
+<!--      <dependency>
         <groupId>com.google.android</groupId>
         <artifactId>android</artifactId>
         <version>${android.platform.version}</version>
@@ -210,7 +183,7 @@
         <groupId>javax.xml.stream</groupId>
         <artifactId>stax-api</artifactId>
         <version>${stax.api.version}</version>
-      </dependency>
+      </dependency>-->
 
       <dependency>
         <groupId>org.slf4j</groupId>
@@ -218,7 +191,7 @@
         <version>${sl4j.version}</version>
       </dependency>
 
-      <dependency>
+<!--      <dependency>
         <groupId>org.apache.commons</groupId>
         <artifactId>commons-vfs2</artifactId>
         <version>${commons.vfs.version}</version>
@@ -268,9 +241,9 @@
         <groupId>org.apache.tomcat</groupId>
         <artifactId>tomcat-jasper</artifactId>
         <version>${tomcat.version}</version>
-      </dependency>
+      </dependency>-->
 
-      <!-- Pojogen Maven Plugin depenencies -->
+<!--       Pojogen Maven Plugin depenencies
       <dependency>
         <groupId>org.apache.velocity</groupId>
         <artifactId>velocity</artifactId>
@@ -286,7 +259,7 @@
         <artifactId>maven-plugin-annotations</artifactId>
         <version>${maven.plugin.tools.version}</version>
       </dependency>
-      <!-- /Pojogen Maven Plugin depenencies -->
+       /Pojogen Maven Plugin depenencies -->
 
       <dependency>
         <groupId>junit</groupId>

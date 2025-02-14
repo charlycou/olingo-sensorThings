@@ -30,8 +30,8 @@
   <parent>
     <groupId>org.apache.olingo</groupId>
     <artifactId>odata-lib</artifactId>
-    <version>5.0.1-SNAPSHOT</version>
-    <relativePath>..</relativePath>
+    <version>5.0.1-SNAPSHOT-sensor-things</version>
+    <relativePath>../pom.xml</relativePath>
   </parent>
 
   <dependencies>
