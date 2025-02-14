@@ -31,7 +31,7 @@
     <groupId>org.apache.olingo</groupId>
     <artifactId>odata-lib</artifactId>
     <version>5.0.1-SNAPSHOT-sensor-things</version>
-    <relativePath>..</relativePath>
+    <relativePath>../pom.xml</relativePath>
   </parent>
 
   <properties>

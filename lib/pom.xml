@@ -78,8 +78,6 @@
       <id>build.quality</id>
       <properties>
         <cobertura.skip>false</cobertura.skip>
-        <!-- nothing excluded -->
-        <exclude.regex></exclude.regex>
       </properties>
     </profile>
   </profiles>
